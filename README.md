@@ -266,8 +266,24 @@ def update_chat(chat_id):
 
 As you can see from the GET and PUT routes we also employed a sort of longpolling to track and store historic messages which solved our second issue. 
 
+### Visuals 
+
+<img src='./images/sp1.png'>
+<img src='./images/sp2.png'>
+<img src='./images/sp3.png'>
+
 ### Challenges 
 
 The main challenged faced from this area of the project was due to using python. This means that we couldn't utilize as a single version of WebSockets but had to split the frontend and backend into two different versions. 
 
 For the backend I used flask_socketio and for the frontend I used socket_client. The challenge comes from the version needed for these two to be compatible. Unfortunately just typing into google bared no results and as such, I had to try an alternative route. I managed to find a project on GitHub that was set up similarly, I then checked the version used in the package.json. Replicating in our project solved the issue. 
+
+### Key Learnings
+
+The most important learning I found from this project was the importance of daily stand-ups and testing. 
+
+The testing element of this project was quite short which lead to a few bugs and edge cases not being discovered. 
+
+In the future, I will dedicate a substantial portion of time to the testing and discovery of edge cases. 
+
+It was great to work with others in a group and it further developed my understanding of dynamics in a group project. 
