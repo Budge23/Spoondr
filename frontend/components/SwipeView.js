@@ -36,7 +36,7 @@ const Swipe = (props) => {
   }, [])
 
   function filterMatched(resData, tempAllUsers) {
-    if (resData.matches === undefined) return
+    if (resData === undefined) return
     const likeDislike = [...resData.matches[0].Liked, resData.matches[0].Disliked, resData.matches[0].Matched].flat()
     const currLikes = likeDislike
     const userPref = resData.gender_preference
