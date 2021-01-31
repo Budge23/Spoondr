@@ -51,22 +51,7 @@ const Matches = (props) => {
 
 
   return <main className="matchesMain">
-    <header>
-      <div>
-        <Link to={'/swipe'}>
-        <img src={Back} alt="back"/>
-        </Link>
-      </div>
-      <div>
-        <h1>Spoondr.</h1>
-      </div>
-      <div>
-        <Link to={'/settings'}>
-          <img src={Settings} alt='settings'></img>
-        </Link>
-        
-      </div>
-    </header>
+    <div className='container'>
     <div className="matchesContainer">
       {filterMatched().map((user, index) => {
         const userChats = user.chats.filter((chat) => {
@@ -75,7 +60,9 @@ const Matches = (props) => {
         return <div className="userDetails" key={index}>
           <div className="userImage">
             <img src={user.images[0].image1} />
+            
           </div>
+          <h3>{user.first_name}</h3>
           <div className="buttonContainer">
             <Link to={`/matches/chat/${userChats[0].id}`}>
               <button>Chat</button>
@@ -87,6 +74,7 @@ const Matches = (props) => {
     </div>
 
     <Footer />
+    </div>
   </main>
 
 

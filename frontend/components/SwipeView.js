@@ -138,6 +138,7 @@ const Swipe = (props) => {
         }
       }}
     >
+      
       <div className="matchDetails">
         <div className="imageContainer">
           <div className="imageInner">
@@ -155,7 +156,7 @@ const Swipe = (props) => {
         <button className="button is-black" style={{ border: '3px solid white', margin: '20px', minWidth: '100px' }} onClick={() => closeMatchModal()}>ok</button>
       </div>
     </Modal>
-
+    <div className='container'>
     <Header />
     <div className="cardContainer">
       {filteredUsers.map((user, index) => {
@@ -170,15 +171,9 @@ const Swipe = (props) => {
       })}
     </div>
 
-    <div className="smallButtonContainer">
-      <div className="smallButton">
-        <img src={UserProfile} alt="userprofile" onClick={goToProfile} />
-      </div>
-      <div className="smallButton">
-        <img src={Superlike} alt="superlike" />
-      </div>
-    </div>
+   
     <Navbar />
+    </div>
   </main>
 }
 

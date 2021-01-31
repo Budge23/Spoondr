@@ -15,11 +15,14 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
 body {
   width: 100vw;
   min-height: 100vh;
+  background: linear-gradient(to right top, rgb(255, 78, 78), rgb(255, 138, 112));
+  font-family: var(--body);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,13 +37,35 @@ body {
 .loginMain {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(211,98,49);
-  background: linear-gradient(0deg, rgba(211,98,49,1) 30%, rgba(232,138,70,1) 71%);
+
+  background: linear-gradient(to right top, rgb(255, 78, 78), rgb(255, 138, 112));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: var(--body);
+
+  .holder {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background: linear-gradient(to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+
+    h1 {
+      color: #426696;
+      font-weight: 800;
+      font-size: 3rem;
+      opacity: 0.8;
+    }
+  }
 
   img {
     width: 300px;
@@ -52,13 +77,16 @@ body {
     align-items: center;
     justify-items: center;
     width: 300px;
+    opacity: 0.8;
+
   }
 
   a {
     width: 100%;
   }
 
-  input, button {
+  input,
+  button {
     width: 100%;
     height: 40px;
     margin: 10px 0 10px 0;
@@ -88,15 +116,34 @@ body {
 .regMain {
   width: 100vw;
   min-height: 100vh;
-  background: rgb(211,98,49);
-  background: linear-gradient(0deg, rgba(211,98,49,1) 30%, rgba(232,138,70,1) 71%);
+  background: linear-gradient(to right top, rgb(255, 78, 78), rgb(255, 138, 112));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: var(--body);
 
+  .holder {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background: linear-gradient(to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+
+  }
+
   h1 {
+    color: #426696;
+    font-weight: 800;
+    font-size: 3rem;
+    opacity: 0.8;
     text-transform: uppercase;
     font-size: 20px;
   }
@@ -113,6 +160,7 @@ body {
     justify-items: center;
     width: 300px;
     text-align: left;
+    margin: 2rem;
   }
 
   a {
@@ -124,7 +172,10 @@ body {
     font-weight: 300;
   }
 
-  input, button, textarea, select {
+  input,
+  button,
+  textarea,
+  select {
     width: 100%;
     height: 35px;
     margin: 10px 0 10px 0;
@@ -132,7 +183,9 @@ body {
     font-family: var(--body);
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     border: none;
     background: var(--extraLight);
     font-size: 16px;
@@ -155,7 +208,7 @@ body {
 // FOOTER/NAVBAR
 
 footer {
-  width: 100vw;
+  width: 100%;
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -164,7 +217,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  background: var(--white);
+
 
   nav {
     width: 100%;
@@ -185,9 +238,25 @@ footer {
 
 // HEADER 
 
+.container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background: linear-gradient(to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+
+}
+
 header {
   z-index: 9;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   position: fixed;
   top: 0;
@@ -196,9 +265,10 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background: var(--extraLight);
 
-  .spacerDiv, .settingsDiv {
+
+  .spacerDiv,
+  .settingsDiv {
     width: 75px;
   }
 
@@ -214,8 +284,11 @@ header {
   }
 
   h1 {
-    font-family: var(--heading);
-    font-size: 40px;
+    color: #426696;
+    font-weight: 800;
+    font-size: 3rem;
+    opacity: 0.8;
+    font-family: var(--body);
   }
 }
 
@@ -228,7 +301,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--extraLight);
+  background: linear-gradient(to right top, rgb(255, 78, 78), rgb(255, 138, 112));
 
   .cardContainer {
     width: 300px;
@@ -247,8 +320,8 @@ header {
     background-size: cover;
     background-position: center;
     background-color: white;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
   }
 
   .swipe {
@@ -264,13 +337,15 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
     padding: 0 0 0 10px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
   }
 
-  .smallButtonContainer, .largeButtonContainer {
+  .smallButtonContainer,
+  .largeButtonContainer {
     width: 80%;
     height: 80px;
     display: flex;
@@ -356,7 +431,7 @@ header {
 }
 
 .modalContent:focus {
-  outline:0;
+  outline: 0;
 }
 
 // MATCHES
@@ -368,7 +443,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--extraLight);
+  background: linear-gradient(to right top, rgb(255, 78, 78), rgb(255, 138, 112));
 
   header {
     width: 100%;
@@ -389,8 +464,8 @@ header {
   }
 
   .matchesContainer {
-    width: 90vw;
-    height: 90vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -401,7 +476,7 @@ header {
 
     .userDetails {
       margin: 10px;
-
+      text-align: center;
       .buttonContainer {
         width: 130px;
         height: 40px;
@@ -508,7 +583,7 @@ header {
   }
 
   button:focus {
-    outline:0;
+    outline: 0;
   }
 
   button {
@@ -545,7 +620,9 @@ header {
     width: 100%;
   }
 
-  input, button, textarea {
+  input,
+  button,
+  textarea {
     width: 100%;
     height: 40px;
     margin: 10px 0 10px 0;
@@ -652,7 +729,8 @@ header {
   background: var(--extraLight);
   font-family: var(--body);
 
-  h2, h3 {
+  h2,
+  h3 {
     text-align: left;
   }
 
@@ -681,7 +759,7 @@ header {
       flex-direction: row;
       flex-wrap: wrap;
     }
-  
+
     .interest {
       width: 100px;
       background: var(--mid);
@@ -707,9 +785,5 @@ header {
     }
   }
 
-  
+
 }
-
-
-
-

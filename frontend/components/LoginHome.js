@@ -37,14 +37,18 @@ const Home = (props) => {
   }
 
   return <main className="loginMain">
-    <img className="hero" src={Logo} alt="logo" />
+ 
+    <div className='holder'>
+  
+    {/* <img className="hero" src={Logo} alt="logo" /> */}
+    <h1>Pear</h1>
     <form onSubmit={handleSubmit}>
       <input
         type="text"
         onChange={handleChange}
         value={loginFormData.email}
         name="email"
-        placeholder="hello@spoondr.com"
+        placeholder="hello@pear.com"
       />
       <input
         type="password"
@@ -57,6 +61,7 @@ const Home = (props) => {
       <p>not registered yet?</p>
       <Link to="/signup"><button>Signup</button></Link>
     </form>
+    </div>
   </main>
 }
 

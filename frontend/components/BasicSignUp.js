@@ -53,8 +53,8 @@ const BasicSignUp = (props) => {
   }
 
   return <main className="regMain">
-    <img src={Logo} alt="Logo"/>
-    <h1>Get Started</h1>
+    <div className='holder'>
+    <h1>Start Pearing</h1>
     <form onSubmit={handleSubmit}>
       <label>First Name
         <input
@@ -141,6 +141,7 @@ const BasicSignUp = (props) => {
       <button>Submit</button>
 
     </form >
+    </div>
   </main>
 
 }

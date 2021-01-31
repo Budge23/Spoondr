@@ -7,7 +7,7 @@ const Header = () => {
   return <header>
     <div className="spacerDiv"></div>
     <div>
-      <h1>Spoondr.</h1>
+      <h1>Pear</h1>
     </div>
     <div className="settingsDiv">
       <Link to={'/settings'}>
