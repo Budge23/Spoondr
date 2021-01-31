@@ -103,7 +103,7 @@ const ChatPage = (props) => {
           </Link>
         </div>
         <div className="heading">
-          <h1>Spoondr.</h1>
+          <h1>Pear</h1>
         </div>
         <div className="backButton"></div>
       </header>
