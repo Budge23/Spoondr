@@ -24,6 +24,7 @@ def signup():
   user.save()
 
   template_match = Matches(
+    id=user.id,
     Liked=[user.id],
     LikedBy=[],
     Matched=[],
