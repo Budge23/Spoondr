@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import SmallLogo from '../images/SpoonsOnlyLogo.png'
+import SmallLogo from '../images/pear.png'
 import { getUserId } from '../lib/UserToken'
 
 const Navbar = () => {

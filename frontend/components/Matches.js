@@ -52,28 +52,28 @@ const Matches = (props) => {
 
   return <main className="matchesMain">
     <div className='container'>
-    <div className="matchesContainer">
-      {filterMatched().map((user, index) => {
-        const userChats = user.chats.filter((chat) => {
-          return chat.user1 === currUserID || chat.user2 === currUserID
-        })
-        return <div className="userDetails" key={index}>
-          <div className="userImage">
-            <img src={user.images[0].image1} />
-            
-          </div>
-          <h3>{user.first_name}</h3>
-          <div className="buttonContainer">
-            <Link to={`/matches/chat/${userChats[0].id}`}>
-              <button>Chat</button>
-            </Link>
-            <button onClick={() => unspoon(user.id)}>Unspoon</button>
-          </div>
-        </div>
-      })}
-    </div>
+      <div className="matchesContainer">
+        {filterMatched().map((user, index) => {
+          const userChats = user.chats.filter((chat) => {
+            return chat.user1 === currUserID || chat.user2 === currUserID
+          })
+          return <div className="userDetails" key={index}>
+            <div className="userImage">
+              <img src={user.images[0].image1} />
 
-    <Footer />
+            </div>
+            <h3>{user.first_name}</h3>
+            <div className="buttonContainer">
+              <Link to={`/matches/chat/${userChats[0].id}`}>
+                <button>Chat</button>
+              </Link>
+              <button onClick={() => unspoon(user.id)}>Unspoon</button>
+            </div>
+          </div>
+        })}
+      </div>
+
+      <Footer />
     </div>
   </main>
 

@@ -95,36 +95,38 @@ const ChatPage = (props) => {
   }
 
   return <main className="chatMain">
-    <header>
-      <div className="backButton">
-        <Link to={'/matches'}>
-          <img src={Back} alt="back" />
-        </Link>
-      </div>
-      <div className="heading">
-        <h1>Spoondr.</h1>
-      </div>
-      <div className="backButton"></div>
-    </header>
-    <div className="chatContainer">
-      <div className="chatInner">
-        {messages.map((msg, key) => {
-          return <div key={key}>
-            <p>{msg}</p>
-          </div>
-        })}
-      </div>
-      <div className="chatInput">
-        <input value={message} name="message" onChange={e => onChange(e)} onSubmit={() => onClick()} />
-        <button onClick={() => onClick()}>
-          <img src={Send} alt="send message" />
-        </button>
+    <div className='container'>
+      <header>
+        <div className="backButton">
+          <Link to={'/matches'}>
+            <img src={Back} alt="back" />
+          </Link>
+        </div>
+        <div className="heading">
+          <h1>Spoondr.</h1>
+        </div>
+        <div className="backButton"></div>
+      </header>
+      <div className="chatContainer">
+        <div className="chatInner">
+          {messages.map((msg, key) => {
+            return <div key={key}>
+              <p>{msg}</p>
+            </div>
+          })}
+        </div>
+        <div className="chatInput">
+          <input value={message} name="message" onChange={e => onChange(e)} onSubmit={() => onClick()} />
+          <button onClick={() => onClick()}>
+            <img src={Send} alt="send message" />
+          </button>
+        </div>
+
       </div>
 
+
+      <Footer />
     </div>
-
-
-    <Footer />
   </main>
 }
 

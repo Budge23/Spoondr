@@ -160,160 +160,164 @@ const UpdateProfile = (props) => {
 
   return <main className="updateUserProfileMain">
     <Header />
-    <form className="userForm">
-      <label>First Name
-        <input
-          type="text"
-          onChange={handleChange}
-          name="first_name"
-          placeholder={formData.first_name}
-        />
-      </label>
+    <div className='updateContainer'>
 
-      <label>Bio
+      <form className="userForm">
+        <label>First Name
+        <input
+            type="text"
+            onChange={handleChange}
+            name="first_name"
+            placeholder={formData.first_name}
+          />
+        </label>
+
+        <label>Bio
         <textarea
-          onChange={handleChange}
-          placeholder={formData.bio}
-          name="bio"
-        />
-      </label>
+            onChange={handleChange}
+            placeholder={formData.bio}
+            name="bio"
+          />
+        </label>
 
-      <label>Gender
-        <input 
-          type="text"
-          onChange={handleChange}
-          name="gender"
-          placeholder={formData.gender}
-        />
-      </label>
-
-      <label>Location
+        <label>Gender
         <input
-          type="text"
-          onChange={handleChange}
-          placeholder={formData.location}
-          name="location"
-        />
-      </label>
+            type="text"
+            onChange={handleChange}
+            name="gender"
+            placeholder={formData.gender}
+          />
+        </label>
 
-      {/* ***** IMAGES ***** */}
-      <label>Image 1</label>
-      <img
-        src={currUserImages.image1}
-        alt="Upload"
-        width="300"
-        name="image1"
-        onClick={(e) => handleImage(e.target.name)}
-      />
-      {currUserImages.image1 && <button name="image1" onClick={(e) => removeImage(e.target.name)}>X</button>}
-
-      <label>Image 2</label>
-      <img
-        src={currUserImages.image2}
-        alt="Upload"
-        width="300"
-        name="image2"
-        onClick={(e) => handleImage(e.target.name)}
-      />
-      {currUserImages.image2 && <button name="image2" onClick={(e) => removeImage(e.target.name)}>X</button>}
-
-      <label>Image 3</label>
-      <img
-        src={currUserImages.image3}
-        alt="Upload"
-        width="300"
-        name="image3"
-        onClick={(e) => handleImage(e.target.name)}
-      />
-      {currUserImages.image3 && <button name="image3" onClick={(e) => removeImage(e.target.name)}>X</button>}
-
-      <label>Image 4</label>
-      <img
-        src={currUserImages.image4}
-        alt="Upload"
-        width="300"
-        name="image4"
-        onClick={(e) => handleImage(e.target.name)}
-      />
-      {currUserImages.image4 && <button name="image4" onClick={(e) => removeImage(e.target.name)}>X</button>}
-
-      <label>Image 5</label>
-      <img
-        src={currUserImages.image5}
-        alt="Upload"
-        width="300"
-        name="image5"
-        onClick={(e) => handleImage(e.target.name)}
-      />
-      {currUserImages.image5 && <button name="image5" onClick={(e) => removeImage(e.target.name)}>X</button>}
-
-      {/* ***** SOCIALS ***** */}
-      <label>Instagram
+        <label>Location
         <input
-          type="text"
-          onChange={(e) => handleSocials(e)}
-          value={currUserSocials.Instagram}
-          name="Instagram"
-        />
-      </label>
+            type="text"
+            onChange={handleChange}
+            placeholder={formData.location}
+            name="location"
+          />
+        </label>
 
-      <label>Facebook
+        {/* ***** IMAGES ***** */}
+        <label>Image 1</label>
+        <img
+          src={currUserImages.image1}
+          alt="Upload"
+          width="300"
+          name="image1"
+          onClick={(e) => handleImage(e.target.name)}
+        />
+        {currUserImages.image1 && <button name="image1" onClick={(e) => removeImage(e.target.name)}>X</button>}
+
+        <label>Image 2</label>
+        <img
+          src={currUserImages.image2}
+          alt="Upload"
+          width="300"
+          name="image2"
+          onClick={(e) => handleImage(e.target.name)}
+        />
+        {currUserImages.image2 && <button name="image2" onClick={(e) => removeImage(e.target.name)}>X</button>}
+
+        <label>Image 3</label>
+        <img
+          src={currUserImages.image3}
+          alt="Upload"
+          width="300"
+          name="image3"
+          onClick={(e) => handleImage(e.target.name)}
+        />
+        {currUserImages.image3 && <button name="image3" onClick={(e) => removeImage(e.target.name)}>X</button>}
+
+        <label>Image 4</label>
+        <img
+          src={currUserImages.image4}
+          alt="Upload"
+          width="300"
+          name="image4"
+          onClick={(e) => handleImage(e.target.name)}
+        />
+        {currUserImages.image4 && <button name="image4" onClick={(e) => removeImage(e.target.name)}>X</button>}
+
+        <label>Image 5</label>
+        <img
+          src={currUserImages.image5}
+          alt="Upload"
+          width="300"
+          name="image5"
+          onClick={(e) => handleImage(e.target.name)}
+        />
+        {currUserImages.image5 && <button name="image5" onClick={(e) => removeImage(e.target.name)}>X</button>}
+
+        {/* ***** SOCIALS ***** */}
+        <label>Instagram
         <input
-          type="text"
-          onChange={(e) => handleSocials(e)}
-          value={currUserSocials.Facebook}
-          name="Facebook"
-        />
-      </label>
+            type="text"
+            onChange={(e) => handleSocials(e)}
+            value={currUserSocials.Instagram}
+            name="Instagram"
+          />
+        </label>
 
-      <label>LinkedIn
+        <label>Facebook
         <input
-          type="text"
-          onChange={(e) => handleSocials(e)}
-          value={currUserSocials.LinkedIn}
-          name="LinkedIn"
-        />
-      </label>
+            type="text"
+            onChange={(e) => handleSocials(e)}
+            value={currUserSocials.Facebook}
+            name="Facebook"
+          />
+        </label>
 
-      <label>Spotify
+        <label>LinkedIn
         <input
-          type="text"
-          onChange={(e) => handleSocials(e)}
-          value={currUserSocials.Spotify}
-          name="Spotify"
-        />
-      </label>
+            type="text"
+            onChange={(e) => handleSocials(e)}
+            value={currUserSocials.LinkedIn}
+            name="LinkedIn"
+          />
+        </label>
 
-      {/* ***** INTERESTS ***** */}
-      <label>My Interests</label>
-      <div className="interestsOuter">
-        {currInterests.map((el, i) => {
-          return <div className="interest" onClick={(e) => handleRemoveInterests(el)} key={i}>{el.name}</div>
-        })}
-      </div>
-
-      <label>Click To Add Interests</label>
-      <div className="interestsOuter">
-        {interests.map((el, i) => {
-          return <div className="interest" onClick={(e) => handleAddInterests(el)} key={i}>{el.name}</div>
-        })}
-      </div>
-
-      <label>Create Interest
+        <label>Spotify
         <input
-          type="text"
-          onChange={(e) => updateText(e.target.value)}
-          onKeyUp={(e) => {
-            if (e.key === 'Enter') {
-              handleCreateInterest(e)
-            }
-          }}
-          value={text}
-        />
-      </label>
+            type="text"
+            onChange={(e) => handleSocials(e)}
+            value={currUserSocials.Spotify}
+            name="Spotify"
+          />
+        </label>
 
-      <button onClick={handleSubmit}>SUBMIT</button>
-    </form>
+        {/* ***** INTERESTS ***** */}
+        <label>My Interests</label>
+        <div className="interestsOuter">
+          {currInterests.map((el, i) => {
+            return <div className="interest" onClick={(e) => handleRemoveInterests(el)} key={i}>{el.name}</div>
+          })}
+        </div>
+
+        <label>Click To Add Interests</label>
+        <div className="interestsOuter">
+          {interests.map((el, i) => {
+            return <div className="interest" onClick={(e) => handleAddInterests(el)} key={i}>{el.name}</div>
+          })}
+        </div>
+
+        <label>Create Interest
+        <input
+            type="text"
+            onChange={(e) => updateText(e.target.value)}
+            onKeyUp={(e) => {
+              if (e.key === 'Enter') {
+                handleCreateInterest(e)
+              }
+            }}
+            value={text}
+          />
+        </label>
+
+        <button onClick={handleSubmit}>SUBMIT</button>
+      </form>
+
+    </div>
     <Footer />
   </main>
 }
